@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alex — Sviluppo Web</title>
+  <meta name="description" content="Sviluppo siti web moderni, responsive e ottimizzati. HTML5 • CSS3 • JavaScript" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon (opzionale) -->
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="brand-title">Alex — Web Developer</h1>
+        <p class="brand-sub">Siti vetrina | Landing page | Portfolio</p>
+      </div>
+
+      <button id="navToggle" aria-expanded="false" aria-controls="siteNav" class="nav-toggle">
+        <span class="sr-only">Apri menu</span>
+        ☰
+      </button>
+
+      <nav id="siteNav" class="site-nav" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="#about">Chi sono</a></li>
+          <li><a href="#services">Servizi</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Progetti web curati, performanti e responsive</h2>
+          <p>Realizzo siti vetrina e landing page ottimizzate per piccole attività e professionisti. Codice pulito, design chiaro e pubblicazione rapida.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Richiedi preventivo</a>
+            <a class="btn outline" href="#portfolio">Vedi portfolio</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- semplice mockup grafico -->
+          <div class="device">
+            <div class="screen">
+              <div class="screen-sample">Esempio sito</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h3>Chi sono</h3>
+      <p>Mi occupo di progettazione e sviluppo front-end con attenzione a performance, accessibilità e usabilità. Lavoro con HTML5, CSS3 e JavaScript per creare esperienze semplici e professionali.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services container">
+      <h3>Servizi</h3>
+      <div class="services-grid">
+        <article class="card">
+          <h4>Sito vetrina</h4>
+          <p>Pagina singola o multipagina per presentare attività e contatti, ottimizzata per dispositivi mobili.</p>
+        </article>
+        <article class="card">
+          <h4>Landing page</h4>
+          <p>Pagina mirata per promozioni o raccolta contatti, con call-to-action e velocità di caricamento.</p>
+        </article>
+        <article class="card">
+          <h4>Personalizzazione grafica</h4>
+          <p>Adattamento grafico del sito allo stile del cliente: colori, font e immagini coordinate.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section container">
+      <h3>Portfolio</h3>
+      <p class="muted">Esempi di siti realizzati (mockup / progetti di prova).</p>
+      <div class="portfolio-grid">
+        <figure class="project">
+          <img src="https://via.placeholder.com/600x400?text=Progetto+1" alt="Screenshot progetto 1" />
+          <figcaption>
+            <strong>Progetto 1</strong>
+            <p>Landing page per promozione servizio locale.</p>
+          </figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://via.placeholder.com/600x400?text=Progetto+2" alt="Screenshot progetto 2" />
+          <figcaption>
+            <strong>Progetto 2</strong>
+            <p>Portfolio personale con gallery immagini.</p>
+          </figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://via.placeholder.com/600x400?text=Progetto+3" alt="Screenshot progetto 3" />
+          <figcaption>
+            <strong>Progetto 3</strong>
+            <p>Sito vetrina per attività locale (orari, contatti, mappe).</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact container">
+      <h3>Contatti</h3>
+      <p>Per richieste di progetto, preventivi o collaborazione, compila il form sottostante.</p>
+
+      <!-- FORM: sostituisci ACTION con il tuo endpoint Formspree -->
+      <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Invia messaggio</button>
+          <button type="reset" class="btn outline">Cancella</button>
+        </div>
+
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Alex — Sviluppo Web. Codice e design: Alex.</p>
+      <p class="muted">Disponibile per progetti freelance e piccole attività.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
