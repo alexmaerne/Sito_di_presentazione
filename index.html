@@ -1,150 +1,145 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Alex — Sviluppo Web</title>
-  <meta name="description" content="Sviluppo siti web moderni, responsive e ottimizzati. HTML5 • CSS3 • JavaScript" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- Favicon (opzionale) -->
-  <link rel="icon" href="favicon.ico" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Vai al contenuto</a>
+<nav>
+		<div class="logo">WEBCREATOR</div>
+		<ul class="nav-links">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#servizi">👁️ Servizi</a></li>
+			<li><a href="#portfolio">📂 Portfolio</a></li>
+			<li><a href="#contatti">✉️ Contatti</a></li>
+		</ul>
+	</nav>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 class="brand-title">Alex — Web Developer</h1>
-        <p class="brand-sub">Siti vetrina | Landing page | Portfolio</p>
-      </div>
+	<section class="hero" id="home">
+		<div class="hero-content">
+			<h1 class="hero-title">CREA IL <span class="gradient-text">FUTURO</span><br>CON UN <span class="gradient-text">SITO WEB</span></h1>
+			<p class="hero-subtitle">Web Developer & UI Designer</p>
+			<p class="hero-description">Creo esperienze digitali immersive che combinano tecnologia all'avanguardia con design accattivante.</p>
+			<div class="cta-buttons">
+				<a href="#servizi" class="btn btn-primary">👁️ Scopri i Miei Servizi</a>
+				<a href="#contatti" class="btn btn-secondary">✉️ Contattami</a>
+			</div>
+		</div>
+		<div class="hero-image">
+			<div class="image-container">
+				<div class="glow-circle"></div>
+				<div class="profile-placeholder">💻</div>
+			</div>
+		</div>
+	</section>
 
-      <button id="navToggle" aria-expanded="false" aria-controls="siteNav" class="nav-toggle">
-        <span class="sr-only">Apri menu</span>
-        ☰
-      </button>
+	<section class="services" id="servizi">
+		<h2 class="section-title">I MIEI <span class="gradient-text">SERVIZI</span></h2>
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">🎨</div>
+				<h3>Design Moderno</h3>
+				<p>Creo design accattivanti e moderni che catturano l'attenzione e migliorano l'esperienza utente con interfacce intuitive.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">💻</div>
+				<h3>Sviluppo Web</h3>
+				<p>Costruisco siti web professionali, responsive e ottimizzati per ogni dispositivo utilizzando le tecnologie più avanzate.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">📱</div>
+				<h3>Responsive Design</h3>
+				<p>Ogni sito è progettato per funzionare perfettamente su smartphone, tablet e desktop garantendo la migliore esperienza.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">⚡</div>
+				<h3>Performance</h3>
+				<p>Ottimizzazione delle prestazioni per garantire tempi di caricamento velocissimi e un'esperienza utente fluida.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🔧</div>
+				<h3>Manutenzione</h3>
+				<p>Supporto continuo e aggiornamenti per mantenere il tuo sito sicuro, moderno e sempre funzionante al meglio.</p>
+			</div>
+			<div class="service-card">
+				<div class="service-icon">🎯</div>
+				<h3>SEO Optimization</h3>
+				<p>Ottimizzazione per i motori di ricerca per aumentare la visibilità online e raggiungere più clienti potenziali.</p>
+			</div>
+		</div>
+	</section>
 
-      <nav id="siteNav" class="site-nav" aria-label="Navigazione principale">
-        <ul>
-          <li><a href="#about">Chi sono</a></li>
-          <li><a href="#services">Servizi</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+	<section class="portfolio" id="portfolio">
+		<h2 class="section-title">IL MIO <span class="gradient-text">PORTFOLIO</span></h2>
+		<div class="portfolio-grid">
+			<div class="portfolio-card">
+				<div class="service-icon">🏢</div>
+				<h3>Sito Aziendale</h3>
+				<p>Sito web completo per azienda con design moderno e curato.</p>
+			</div>
+			<div class="portfolio-card">
+				<div class="service-icon">🛒</div>
+				<h3>Sito Personale</h3>
+				<p>Sito web completo personale/privato con design moderno e curato. Un esempio è questo sito!!</p>
+			</div>
+			<div class="portfolio-card">
+				<div class="service-icon">🎨</div>
+				<h3>Portfolio Creativo</h3>
+				<p>Portfolio che mostra il tuo lavoro con galleria interattiva e animazioni personalizzate.</p>
+			</div>
+		</div>
+	</section>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h2>Progetti web curati, performanti e responsive</h2>
-          <p>Realizzo siti vetrina e landing page ottimizzate per piccole attività e professionisti. Codice pulito, design chiaro e pubblicazione rapida.</p>
-          <div class="cta">
-            <a class="btn primary" href="#contact">Richiedi preventivo</a>
-            <a class="btn outline" href="#portfolio">Vedi portfolio</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <!-- semplice mockup grafico -->
-          <div class="device">
-            <div class="screen">
-              <div class="screen-sample">Esempio sito</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+	<section class="contact" id="contatti">
+		<h2 class="section-title">LAVORIAMO <span class="gradient-text">INSIEME</span></h2>
+		<p class="contact-intro">Hai un progetto in mente? Contattami e trasformiamo la tua idea in realtà</p>
 
-    <!-- About -->
-    <section id="about" class="section container">
-      <h3>Chi sono</h3>
-      <p>Mi occupo di progettazione e sviluppo front-end con attenzione a performance, accessibilità e usabilità. Lavoro con HTML5, CSS3 e JavaScript per creare esperienze semplici e professionali.</p>
-    </section>
+		<div class="contact-container">
+			<div class="contact-info">
+				<h3>Informazioni di Contatto</h3>
+				<div class="info-item">
+					<span>👤</span>
+					<div>
+						<h4>Nome</h4>
+						<p>Alex</p>
+					</div>
+				</div>
+				<div class="info-item">
+					<span>✉️</span>
+					<div>
+						<h4>Email</h4>
+						<p>alexmaerne@gmail.com</p>
+					</div>
+				</div>
+				<div class="info-item">
+					<span>💻</span>
+					<div>
+						<h4>Specializzazioni</h4>
+						<p>HTML, CSS, JavaScript, Python</p>
+					</div>
+				</div>
+				<div class="info-item">
+					<span>🚀</span>
+					<div>
+						<h4>Tempo di Risposta</h4>
+						<p>Entro 24 ore</p>
+					</div>
+				</div>
+			</div>
 
-    <!-- Services -->
-    <section id="services" class="section services container">
-      <h3>Servizi</h3>
-      <div class="services-grid">
-        <article class="card">
-          <h4>Sito vetrina</h4>
-          <p>Pagina singola o multipagina per presentare attività e contatti, ottimizzata per dispositivi mobili.</p>
-        </article>
-        <article class="card">
-          <h4>Landing page</h4>
-          <p>Pagina mirata per promozioni o raccolta contatti, con call-to-action e velocità di caricamento.</p>
-        </article>
-        <article class="card">
-          <h4>Personalizzazione grafica</h4>
-          <p>Adattamento grafico del sito allo stile del cliente: colori, font e immagini coordinate.</p>
-        </article>
-      </div>
-    </section>
+			<div class="contact-form">
+				<form id="contactForm">
+					<div class="form-group">
+						<input type="text" placeholder="Il tuo nome" required>
+					</div>
+						<div class="form-group">
+						<input type="email" placeholder="La tua email" required>
+					</div>
+					<div class="form-group">
+						<input type="text" placeholder="Oggetto">
+					</div>
+					<div class="form-group">
+						<textarea placeholder="Il tuo messaggio" rows="6" required></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Invia Messaggio</button>
+				</form>
+			</div>
+		</div>
+	</section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="section container">
-      <h3>Portfolio</h3>
-      <p class="muted">Esempi di siti realizzati (mockup / progetti di prova).</p>
-      <div class="portfolio-grid">
-        <figure class="project">
-          <img src="https://via.placeholder.com/600x400?text=Progetto+1" alt="Screenshot progetto 1" />
-          <figcaption>
-            <strong>Progetto 1</strong>
-            <p>Landing page per promozione servizio locale.</p>
-          </figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://via.placeholder.com/600x400?text=Progetto+2" alt="Screenshot progetto 2" />
-          <figcaption>
-            <strong>Progetto 2</strong>
-            <p>Portfolio personale con gallery immagini.</p>
-          </figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://via.placeholder.com/600x400?text=Progetto+3" alt="Screenshot progetto 3" />
-          <figcaption>
-            <strong>Progetto 3</strong>
-            <p>Sito vetrina per attività locale (orari, contatti, mappe).</p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact container">
-      <h3>Contatti</h3>
-      <p>Per richieste di progetto, preventivi o collaborazione, compila il form sottostante.</p>
-
-      <!-- FORM: sostituisci ACTION con il tuo endpoint Formspree -->
-      <form id="contactForm" class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
-        <label for="name">Nome</label>
-        <input id="name" name="name" type="text" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-
-        <label for="message">Messaggio</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Invia messaggio</button>
-          <button type="reset" class="btn outline">Cancella</button>
-        </div>
-
-        <p id="formStatus" class="form-status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Alex — Sviluppo Web. Codice e design: Alex.</p>
-      <p class="muted">Disponibile per progetti freelance e piccole attività.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+	<footer class="footer" style="text-align:center; padding:20px; color:#94a3b8;">
+		<p>&copy; 2024 WebCreator - Alex. Tutti i diritti riservati.</p>
+	</footer>
