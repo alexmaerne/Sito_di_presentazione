@@ -358,16 +358,30 @@
 			}
 
 		body {
-			font-size: 70%;
+			font-size: 16px;
+			padding: 20px;
 		}
 		img {
-			width: 70%;
+			width: 100%;
 			height: auto;
 		}
-		* {
-			padding: 0.7em;
-			margin: 0.7em;
-			box-sizing: border-box;
+		@media (max-width: 768px) {
+			body {
+				font-size: 14px; /* testi leggermente più piccoli */
+				padding: 15px;
+			}
+		}
+		@media (max-width: 480px) {
+			body {
+				font-size: 12px; /* testi ancora più piccoli */
+				padding: 10px;
+			}
+			img {
+				width: 100%; /* immagini si adattano sempre allo schermo */
+			}
+			.container {
+				width: 100%;
+			}
 		}
 
 	</style>
