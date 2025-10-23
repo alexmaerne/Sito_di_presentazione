@@ -357,13 +357,18 @@
 				flex-direction: column;
 			}
 		}
+		body {
+    		transform: scale(0.6); /* 0.6 = 60% delle dimensioni originali -> riduce del 40% */
+    		transform-origin: top left; /* Mantiene l'origine in alto a sinistra */
+    		width: 142.85%; /* Serve per compensare la scala e non avere spazi vuoti */
+		}
 	</style>
 </head>
 <body>
 	<nav>
 		<div class="logo">WEBCREATOR</div>
 		<ul class="nav-links">
-			<li><a href="#home">Home</a></li>
+			<li><a href="#home">🏠 Home</a></li>
 			<li><a href="#servizi">👁️ Servizi</a></li>
 			<li><a href="#portfolio">📂 Portfolio</a></li>
 			<li><a href="#contatti">✉️ Contatti</a></li>
