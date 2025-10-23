@@ -10,6 +10,9 @@
 			padding: 0;
 			box-sizing: border-box;
 		}
+		html {
+			font-size: 70%; /* Riduce tutto del 30% senza rompere layout */
+		}
 
 		body {
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,14 +98,8 @@
 			min-width: 300px;
 		}
 
-		.hero-title {
-			font-size: 72px;
-			font-weight: 800;
-			line-height: 1.1;
-			margin-bottom: 20px;
-			text-transform: uppercase;
-			letter-spacing: 3px;
-		}
+		.hero-title { font-size: 4.5rem; }  /* invece di 72px */
+
 
 		.gradient-text {
 			background: linear-gradient(90deg, #3b82f6, #06b6d4);
@@ -110,20 +107,11 @@
 			-webkit-text-fill-color: transparent;
 		}
 
-		.hero-subtitle {
-			font-size: 22px;
-			font-weight: 300;
-			margin-bottom: 15px;
-			color: #94a3b8;
-		}
+		.hero-subtitle { font-size: 1.5rem; }  /* invece di 22px */
 
-		.hero-description {
-			font-size: 16px;
-			line-height: 1.8;
-			color: #64748b;
-			max-width: 550px;
-			margin-bottom: 40px;
-		}
+
+		.hero-description { font-size: 1rem; } /* invece di 16px */
+
 
 		.cta-buttons {
 			display: flex;
@@ -180,11 +168,8 @@
 			align-items: center;
 		}
 
-		.image-container {
-			position: relative;
-			width: 450px;
-			height: 450px;
-		}
+		.image-container { width: 28rem; height: 28rem; } /* invece di 450px */
+
 
 		.glow-circle {
 			position: absolute;
@@ -352,37 +337,30 @@
 			50% { transform: scale(1.1); opacity: 0.8; }
 		}
 
-		@media (max-width: 768px) {
-			.cta-buttons {
-				flex-direction: column;
-			}
+		@media (max-width: 1024px) {
+			.hero-title { font-size: 4rem; }
+			.hero-subtitle { font-size: 1.3rem; }
+			.hero-description { font-size: 0.85rem; }
+		}
 
-		body {
-			font-size: 16px;
-			padding: 20px;
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
 		@media (max-width: 768px) {
-			body {
-				font-size: 14px; /* testi leggermente più piccoli */
-				padding: 15px;
-			}
+			.hero { flex-direction: column; align-items: flex-start; }
+			.hero-title { font-size: 3rem; }
+			.hero-subtitle { font-size: 1.2rem; }
+			.hero-description { font-size: 0.8rem; }
+			.cta-buttons { flex-direction: column; gap: 15px; }
 		}
+
 		@media (max-width: 480px) {
-			body {
-				font-size: 12px; /* testi ancora più piccoli */
-				padding: 10px;
-			}
-			img {
-				width: 100%; /* immagini si adattano sempre allo schermo */
-			}
-			.container {
-				width: 100%;
-			}
+			nav { padding: 15px; }
+			.hero-title { font-size: 2.2rem; }
+			.hero-subtitle { font-size: 1rem; }
+			.hero-description { font-size: 0.75rem; }
+			.cta-buttons { width: 100%; }
+			.btn { width: 100%; padding: 10px; font-size: 0.8rem; }
+			.services-grid, .portfolio-grid, .contact-container { grid-template-columns: 1fr; gap: 20px; }
 		}
+
 
 	</style>
 </head>
