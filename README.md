@@ -40,6 +40,5 @@ Il mio obiettivo è continuare a crescere come sviluppatore web, migliorando le 
 ### Contatti
 
 Per richieste o collaborazioni:  
-📧 *In fase di configurazione form contatti – disponibile a breve*  
-
+Scrivetemi alla mail: alexmaerne@gmail.com  oppure ↓
 Trovate tutte le informazione nel mio sito: https://alexmaerne.github.io/Sito_di_presentazione/
