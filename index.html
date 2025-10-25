@@ -309,6 +309,136 @@
 			line-height: 1.6;
 		}
 
+		/* Pricing Section */
+		.pricing {
+			padding: 100px 8%;
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		.pricing-intro {
+			text-align: center;
+			color: #94a3b8;
+			font-size: 18px;
+			margin-top: -40px;
+			margin-bottom: 60px;
+		}
+
+		.pricing-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 40px;
+			margin-bottom: 60px;
+		}
+
+		.pricing-card {
+			background: rgba(30, 41, 59, 0.5);
+			padding: 40px;
+			border-radius: 20px;
+			border: 1px solid rgba(100, 116, 139, 0.3);
+			text-align: center;
+			transition: all 0.4s ease;
+			position: relative;
+		}
+
+		.pricing-card:hover {
+			transform: translateY(-10px);
+			border-color: #3b82f6;
+			box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+		}
+
+		.pricing-card.featured {
+			border: 2px solid #3b82f6;
+			background: rgba(59, 130, 246, 0.1);
+		}
+
+		.badge {
+			position: absolute;
+			top: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: linear-gradient(135deg, #3b82f6, #2563eb);
+			color: white;
+			padding: 8px 20px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 1px;
+		}
+
+		.pricing-icon {
+			font-size: 60px;
+			margin-bottom: 20px;
+		}
+
+		.pricing-card h3 {
+			color: #3b82f6;
+			font-size: 28px;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.price {
+			font-size: 36px;
+			font-weight: 700;
+			color: #f8fafc;
+			margin: 20px 0;
+		}
+
+		.pricing-description {
+			color: #94a3b8;
+			margin-bottom: 30px;
+			font-size: 14px;
+		}
+
+		.pricing-features {
+			list-style: none;
+			text-align: left;
+			margin: 0;
+			padding: 0;
+		}
+
+		.pricing-features li {
+			color: #cbd5e1;
+			padding: 12px 0;
+			border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+			font-size: 15px;
+		}
+
+		.pricing-features li:last-child {
+			border-bottom: none;
+		}
+
+		.pricing-info {
+			background: rgba(30, 41, 59, 0.5);
+			padding: 40px;
+			border-radius: 20px;
+			border: 1px solid rgba(100, 116, 139, 0.3);
+			text-align: center;
+		}
+
+		.pricing-info h3 {
+			color: #f8fafc;
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		.info-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+		}
+
+		.info-box {
+			background: rgba(59, 130, 246, 0.1);
+			padding: 20px;
+			border-radius: 15px;
+			color: #cbd5e1;
+			font-size: 15px;
+			line-height: 1.6;
+			border: 1px solid rgba(59, 130, 246, 0.2);
+		}
+
 		/* Contatti */
 		.contact {
 			padding: 100px 8%;
@@ -560,7 +690,16 @@
 				padding: 60px 5%;
 			}
 
+			.pricing {
+				padding: 60px 5%;
+			}
+
 			.services-grid, .portfolio-grid {
+				grid-template-columns: 1fr;
+				gap: 25px;
+			}
+
+			.pricing-grid, .info-grid {
 				grid-template-columns: 1fr;
 				gap: 25px;
 			}
@@ -578,11 +717,12 @@
 </head>
 <body>
 	<nav>
-		<div class="logo">WEBCREATOR</div>
+		<div class="logo">ALEX.WEBCREATOR</div>
 		<ul class="nav-links">
 			<li><a href="#home">🏠 Home</a></li>
 			<li><a href="#servizi">👁️ Servizi</a></li>
 			<li><a href="#portfolio">📂 Portfolio</a></li>
+			<li><a href="#prezzi">💸 Prezzi</a></li>
 			<li><a href="#contatti">✉️ Contatti</a></li>
 		</ul>
 	</nav>
@@ -659,6 +799,66 @@
 				<h3>Portfolio Creativo</h3>
 				<p>Portfolio che mostra il tuo lavoro con galleria interattiva e animazioni personalizzate.</p>
 			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section class="pricing" id="prezzi">
+		<h2 class="section-title">💸 <span class="gradient-text">PREZZI</span> TRASPARENTI</h2>
+		<p class="pricing-intro">Pacchetti chiari e accessibili per ogni esigenza</p>
+
+		<div class="pricing-grid">
+			<div class="pricing-card">
+				<div class="pricing-icon">💼</div>
+				<h3>BASE</h3>
+				<div class="price">50–80 €</div>
+				<p class="pricing-description">Solo codice + pubblicazione (senza dominio)</p>
+				<ul class="pricing-features">
+					<li>✅ Sito web completo</li>
+					<li>✅ Design moderno e responsive</li>
+					<li>✅ Ottimizzato per mobile e PC</li>
+					<li>✅ Pubblicazione online</li>
+					<li>✅ Supporto iniziale</li>
+				</ul>
+			</div>
+
+			<div class="pricing-card featured">
+				<div class="badge">PIÙ SCELTO</div>
+				<div class="pricing-icon">🌐</div>
+				<h3>COMPLETO</h3>
+				<div class="price">100–150 €</div>
+				<p class="pricing-description">Codice + pubblicazione + dominio 1 anno</p>
+				<ul class="pricing-features">
+					<li>✅ Tutto del pacchetto Base</li>
+					<li>✅ Dominio .it o .com incluso</li>
+					<li>✅ Hosting 1 anno incluso</li>
+					<li>✅ Configurazione completa</li>
+					<li>✅ Form di contatto funzionante</li>
+				</ul>
+			</div>
+
+			<div class="pricing-card">
+				<div class="pricing-icon">🚀</div>
+				<h3>PREMIUM</h3>
+				<div class="price">Su richiesta</div>
+				<p class="pricing-description">Tutto sopra + personalizzazioni avanzate</p>
+				<ul class="pricing-features">
+					<li>✅ Tutto del pacchetto Completo</li>
+					<li>✅ Testi su misura per l'azienda</li>
+					<li>✅ Logo e colori personalizzati</li>
+					<li>✅ Animazioni avanzate</li>
+					<li>✅ Supporto prioritario</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="pricing-info">
+			<h3>🏆 I Prezzi Più Bassi del Mercato</h3>
+			<p style="color: #cbd5e1; font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+				Non ci credi? Vai su Google e confronta! <br>
+				Offro qualità professionale a prezzi imbattibili. <br>
+				Nessun trucco, solo trasparenza e lavoro onesto. 💙
+			</p>
 		</div>
 	</section>
 
