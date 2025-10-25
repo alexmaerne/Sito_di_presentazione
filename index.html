@@ -720,10 +720,15 @@
 	</section>
 
 	<footer class="footer">
-		<p>&copy; 2024 WebCreator - Alex. Tutti i diritti riservati.</p>
+		<p>&copy; 2025 WebCreator - Alex. Tutti i diritti riservati.</p>
 	</footer>
 
+	<!-- EmailJS Script -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script>
+		// Inizializza EmailJS con la tua Public Key
+		emailjs.init("uRy_zUBKgqFcRWLT3");
+
 		// Smooth scrolling
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 			anchor.addEventListener('click', function (e) {
@@ -741,11 +746,37 @@
 			});
 		});
 
-		// Contact form
+		// Contact form con EmailJS
 		document.getElementById('contactForm').addEventListener('submit', function(e) {
 			e.preventDefault();
-			alert('Grazie per il messaggio! Ti risponderò al più presto.');
-			this.reset();
+			
+			// Mostra messaggio di invio
+			const submitBtn = this.querySelector('button[type="submit"]');
+			const originalText = submitBtn.innerHTML;
+			submitBtn.innerHTML = '⏳ Invio in corso...';
+			submitBtn.disabled = true;
+
+			// Prepara i parametri per EmailJS
+			const templateParams = {
+				nome: this.querySelector('input[placeholder="Il tuo nome"]').value,
+				email: this.querySelector('input[type="email"]').value,
+				oggetto: this.querySelector('input[placeholder="Oggetto"]').value,
+				messaggio: this.querySelector('textarea').value
+			};
+
+			// Invia l'email tramite EmailJS
+			emailjs.send('service_tycvkil', 'template_spfrz0b', templateParams)
+				.then(function() {
+					alert('✅ Messaggio inviato con successo! Ti risponderò al più presto.');
+					document.getElementById('contactForm').reset();
+					submitBtn.innerHTML = originalText;
+					submitBtn.disabled = false;
+				}, function(error) {
+					alert('❌ Errore nell\'invio del messaggio. Riprova o contattami direttamente via email.');
+					console.error('Errore EmailJS:', error);
+					submitBtn.innerHTML = originalText;
+					submitBtn.disabled = false;
+				});
 		});
 	</script>
 </body>
